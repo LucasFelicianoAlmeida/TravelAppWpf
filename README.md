@@ -1,2 +1,2 @@
 # TravelAppWpf
-A travel app using wpf
+A desktop travel app using wpf.
