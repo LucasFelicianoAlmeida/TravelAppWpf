@@ -24,6 +24,9 @@ namespace TravelApp
         {
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
+
+            //Uri uri = new Uri("/img/beach2.jpeg", UriKind.Relative);
+            //img.Source = new BitmapImage(uri);
         }
     }
 }

@@ -5,9 +5,58 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TravelApp"
         mc:Ignorable="d"
+        WindowStyle="None"
         Background="{DynamicResource ResourceKey=primary}"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="700" Width="1000">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="163*"/>
+            <ColumnDefinition Width="637*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel VerticalAlignment="Center">
+            <Button Content="Home"
+                    Background="#252525" Foreground="White"/>
+            <Image 
+               
+               Source="/Images/island.jpeg"/>
+        </StackPanel>
+        <Grid 
+               Grid.Column="1">
+
+
+            <Image x:Name="img"
+               Opacity=".5"
+               Source="/Img/mountain1.jpeg"
+               Stretch="UniformToFill"
+               />
+            <StackPanel 
+                        VerticalAlignment="Center"
+                        ClipToBounds="True"
+                        HorizontalAlignment="Left">
+
+                <TextBlock Text="Brazil" FontWeight="Bold" 
+                           FontSize="40" Opacity=".5"
+                           Margin="25,0"
+                       Foreground="White">
+                    <TextBlock.RenderTransform>
+                        <TranslateTransform X="-40"/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+                <TextBlock Text="Netherlands" FontWeight="Bold"
+                       FontSize="40" Margin="10,0"
+                       Foreground="White"/>
+                <TextBlock Text="Norway" ClipToBounds="True" FontWeight="Bold" 
+                       FontSize="40" Opacity=".5" Margin="25,0"
+                       Foreground="White">
+                    <TextBlock.RenderTransform>
+                        <TranslateTransform X="-40"/>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+            </StackPanel>
+        </Grid>
+        <!--Source="https://images.pexels.com/photos/9527445/pexels-photo-9527445.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940"/>-->
+
 
     </Grid>
 </Window>
