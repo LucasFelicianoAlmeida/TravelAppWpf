@@ -17,6 +17,10 @@
         <StackPanel VerticalAlignment="Center">
             <Button Content="Home"
                     Background="#252525" Foreground="White"/>
+            <Button Content="My List"
+                    Background="#252525" Foreground="White"/>
+            <Button Content="Home"
+                    Background="#252525" Foreground="White"/>
             <Image 
                
                Source="/Images/island.jpeg"/>
