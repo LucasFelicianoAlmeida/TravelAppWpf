@@ -23,16 +23,23 @@ namespace TravelApp.MVVM.ViewModel
         public async Task PopulateList()
         {
 
-            HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("https://localhost:5001/api/");
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            var response = await client.GetAsync("country");
-            var content = await response.Content.ReadAsStringAsync();
-            var countries = JsonConvert.DeserializeObject<Country[]>(content);
-
-            foreach (var country in countries)
+            try
             {
-                Countries.Add(country);
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri("https://localhost:5001/api/");
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                var response = await client.GetAsync("country");
+                var content = await response.Content.ReadAsStringAsync();
+                var countries = JsonConvert.DeserializeObject<Country[]>(content);
+
+                foreach (var country in countries)
+                {
+                    Countries.Add(country);
+                }
+            }
+            catch (Exception ex)
+            {
+
             }
         }
 

@@ -36,7 +36,7 @@ namespace TravelApp
             DataContext = _Hvm;
 
             DispatcherTimer dp = new DispatcherTimer();
-            dp.Interval = new TimeSpan(0, 0, 2);
+            dp.Interval = new TimeSpan(0, 0, 8);
             dp.Tick += Dp_Tick;
             dp.Start();
 
@@ -125,9 +125,10 @@ namespace TravelApp
 
         private  async void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            await _Hvm.PopulateList();
+           await _Hvm.PopulateList();
 
             var list = control.Items;
+            if (list.Count == 0) return;
             var first  = list[0] as Country;
             var second  = list[1] as Country;
             first.Status = CountryEnum.Selected;

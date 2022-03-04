@@ -111,6 +111,12 @@
                 
             </ItemsControl>
             </ScrollViewer>
+            <Border  HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                     Background="Blue" 
+                     CornerRadius="30" Padding="20">
+                <TextBlock Text="+"/>
+
+            </Border>
             
             
             <StackPanel Visibility="Hidden"
