@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "4qSR0rNhsoP7sfaKugz6T4z7e2AXvaXlo9xXf4NFsqmDTC4EC+h0FNraWAC2Vx9fc17Kw7e0FTTv7pZ8woVhTQ==",
+  "dgSpecHash": "y6dp44YhYKwumCMqF3+dOhYzNjYcBe2U0tUNkvQYJa1XQiS7WKtl7CEys3vOMYn80fL4bq9OV6BIGNRcBZxiMg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lucas Dev\\Desktop\\TravelAppWpf\\TravelApp\\TravelApp\\TravelApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Lucas Dev\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

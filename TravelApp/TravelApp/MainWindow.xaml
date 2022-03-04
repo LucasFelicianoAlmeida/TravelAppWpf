@@ -3,11 +3,30 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:TravelApp"
+        xmlns:local="clr-namespace:TravelApp" xmlns:utils="clr-namespace:TravelApp.Utils"
         mc:Ignorable="d"
         WindowStyle="None"
         Background="{DynamicResource ResourceKey=primary}"
         Title="MainWindow" Height="700" Width="1000">
+    <Window.Resources>
+        <DataTemplate x:Key="selectedLayout">
+            <StackPanel ClipToBounds="False">
+                <TextBlock Text="Netherlands" FontWeight="Bold"
+                       FontSize="40" Margin="10,0"
+                       Foreground="White"/>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate x:Key="unselectedLayout">
+            <StackPanel ClipToBounds="False">
+                <TextBlock Text="{Binding CountryName}" FontWeight="Bold"
+                       FontSize="40" Opacity=".5" Margin="25,0"
+                       Foreground="White"/>
+            </StackPanel>
+        </DataTemplate>
+
+        <utils:CountrySelector x:Key="selector" SelectedTemplate="{StaticResource ResourceKey=selectedLayout}"
+                               UnselectedTemplate1="{StaticResource ResourceKey=unselectedLayout}"/>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="163*"/>
@@ -34,7 +53,67 @@
                Source="/Img/mountain1.jpeg"
                Stretch="UniformToFill"
                />
-            <StackPanel 
+
+            <ListView ItemsSource="{Binding Countries}" Visibility="Hidden"
+                      Background="Transparent" BorderBrush="Transparent"
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding CountryName}" Foreground="White"
+                                   FontSize="40"
+                                   FontWeight="Bold" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ScrollViewer ScrollChanged="ScrollViewer_ScrollChanged"
+                          x:Name="scrollViewer" Height="150"
+                          VerticalScrollBarVisibility="Hidden">
+                
+            <ItemsControl ItemsSource="{Binding Countries}"
+                          x:Name="control" 
+                          Loaded="control_Loaded" Padding="0,0,0,30"
+                          >
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            
+                        <StackPanel ClipToBounds="False" 
+                                    Height="50">
+                                <TextBlock Text="{Binding CountryName}" FontWeight="Bold"
+                       FontSize="40" 
+                       Foreground="White"/>
+                                <StackPanel.Style>
+                                <Style TargetType="StackPanel">
+                                    <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Status,Mode=TwoWay}" Value="Selected">
+                                                <Setter Property="Opacity" Value="1"/>
+                                                <Setter Property="Margin" Value="30,0"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Status,Mode=TwoWay}" Value="Near">
+                                                <Setter Property="Opacity" Value=".5"/>
+                                                <Setter Property="Margin" Value="10,0"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding Status,Mode=TwoWay}" Value="Far">
+                                                <Setter Property="Opacity" Value="0"/>
+                                                <Setter Property="Margin" Value="10,0"/>
+                                            </DataTrigger>
+                                        
+                                        
+                                        </Style.Triggers>
+                                        <Setter Property="Margin" Value="10,0"/>
+                                        <Setter Property="Opacity" Value=".5"/>
+                                    
+                                    
+                                    </Style>
+                            </StackPanel.Style>
+                        </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                
+            </ItemsControl>
+            </ScrollViewer>
+            
+            
+            <StackPanel Visibility="Hidden"
                         VerticalAlignment="Center"
                         ClipToBounds="True"
                         HorizontalAlignment="Left">
@@ -58,6 +137,7 @@
                     </TextBlock.RenderTransform>
                 </TextBlock>
             </StackPanel>
+            
         </Grid>
         <!--Source="https://images.pexels.com/photos/9527445/pexels-photo-9527445.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940"/>-->
 
