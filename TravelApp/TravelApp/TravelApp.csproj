@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Img\covid.png" />
+    <None Remove="Img\covid2.png" />
     <None Remove="Img\mountain1.jpeg" />
   </ItemGroup>
 
@@ -19,6 +21,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Img\covid.png" />
+    <Resource Include="Img\covid2.png" />
     <Resource Include="Img\mountain1.jpeg" />
   </ItemGroup>
 

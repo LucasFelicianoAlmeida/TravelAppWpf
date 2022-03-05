@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStyle="None"
         Background="{DynamicResource ResourceKey=primary}"
-        Title="MainWindow" Height="700" Width="1000">
+        Title="MainWindow" Height="700" Width="1200">
     <Window.Resources>
         <DataTemplate x:Key="selectedLayout">
             <StackPanel ClipToBounds="False">
@@ -33,17 +33,30 @@
             <ColumnDefinition Width="637*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel VerticalAlignment="Center">
-            <Button Content="Home"
-                    Background="#252525" Foreground="White"/>
-            <Button Content="My List"
-                    Background="#252525" Foreground="White"/>
-            <Button Content="Home"
-                    Background="#252525" Foreground="White"/>
+        <Grid VerticalAlignment="Center"
+              
+                    >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Button Content="Home" Grid.Row="0"
+                    BorderBrush="Transparent" FontSize="20"
+                    Background="#252525" Foreground="White"
+                    Margin="5"/>
+            <Button Content="My List" Grid.Row="1"
+                    BorderBrush="Transparent" FontSize="20"
+                    Background="#252525" Foreground="White"
+                    Margin="5"/>
+            <Button Content="Home" Grid.Row="2"
+                    BorderBrush="Transparent" FontSize="20"
+                    Background="#252525" Foreground="White"
+                    Margin="5"/>
             <Image 
                
                Source="/Images/island.jpeg"/>
-        </StackPanel>
+        </Grid>
         <Grid 
                Grid.Column="1">
 
@@ -142,6 +155,29 @@
                         <TranslateTransform X="-40"/>
                     </TextBlock.RenderTransform>
                 </TextBlock>
+            </StackPanel>
+            <StackPanel Width="400"
+                   Height="400"
+                        HorizontalAlignment="Right" Margin="20">
+                <Image Source="/Img/covid2.png"
+                   
+                   Stretch="UniformToFill"
+                   />
+            </StackPanel>
+
+            <StackPanel VerticalAlignment="Bottom"
+                        Margin="20">
+                <Border Background="#023047"
+                        Height="150" Width="120"
+                        CornerRadius="20">
+                    <StackPanel>
+                        <Image Source="/Img/covid.png" 
+                               Stretch="UniformToFill"/>
+                        <TextBlock Text="Viagem" 
+                               FontSize="22" Foreground="White"
+                               VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
             </StackPanel>
             
         </Grid>

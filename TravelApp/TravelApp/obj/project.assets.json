@@ -48,23 +48,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lucas Dev\\.nuget\\packages\\": {},
+    "C:\\Users\\lucas\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lucas Dev\\Desktop\\TravelAppWpf\\TravelApp\\TravelApp\\TravelApp.csproj",
+      "projectUniqueName": "C:\\Users\\lucas\\Desktop\\TravelAppWpf\\TravelApp\\TravelApp\\TravelApp.csproj",
       "projectName": "TravelApp",
-      "projectPath": "C:\\Users\\Lucas Dev\\Desktop\\TravelAppWpf\\TravelApp\\TravelApp\\TravelApp.csproj",
-      "packagesPath": "C:\\Users\\Lucas Dev\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lucas Dev\\Desktop\\TravelAppWpf\\TravelApp\\TravelApp\\obj\\",
+      "projectPath": "C:\\Users\\lucas\\Desktop\\TravelAppWpf\\TravelApp\\TravelApp\\TravelApp.csproj",
+      "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lucas\\Desktop\\TravelAppWpf\\TravelApp\\TravelApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Lucas Dev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -114,7 +114,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }
